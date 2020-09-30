@@ -26,7 +26,7 @@
 ## Installation
 
 ```
-bash <(wget -qO- https://github.com/UnchartedBull/OctoDash/raw/master/scripts/install.sh)
+bash <(wget -qO- https://github.com/TheNeskik/OctoDash/raw/master/scripts/install.sh)
 ```
 
 For more options and information have a look at the [wiki](https://github.com/UnchartedBull/OctoDash/wiki/Installation).
@@ -40,7 +40,7 @@ Having issues during the installation? Please have a look at the [Troubleshootin
 _deprecated, from v2.0 onwards OctoDash can be updated from within the app_
 
 ```
-wget -qO- https://github.com/UnchartedBull/OctoDash/raw/master/scripts/update.sh | bash
+wget -qO- https://github.com/TheNeskik/OctoDash/raw/master/scripts/update.sh | bash
 ```
 
 For more info have a look at the [wiki](https://github.com/UnchartedBull/OctoDash/wiki/Update)
