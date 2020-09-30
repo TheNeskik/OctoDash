@@ -41,7 +41,7 @@
 
   &-filaments {
     margin-top: 2vh;
-    width: 94vw;
+    width: 96vw;
     display: block;
     height: 67vh;
     overflow-y: scroll;
@@ -49,12 +49,12 @@
     padding-right: 1.5vw;
 
     &::before {
-      content: "";
-      width: 92vw;
-      height: 69.2vh;
+      content: '';
+      width: 96vw;
+      height: 68vh;
       position: fixed;
       left: 1vw;
-      top: 31.5vh;
+      top: 30.5vh;
       z-index: 2;
       pointer-events: none;
       background: linear-gradient(#353b48, transparent 6%, transparent 94%, #353b48);
@@ -305,7 +305,7 @@
 }
 
 .scroll__thumb-inactive {
-  right: 2.5vw;
+  right: 2vw;
   top: 36vh;
   height: 57.2vh;
 }
