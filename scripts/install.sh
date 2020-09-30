@@ -668,7 +668,7 @@ text_input() {
 
 
 
-releaseURL=$(curl -s "https://api.github.com/repos/UnchartedBull/OctoDash/releases/latest" | grep "browser_download_url.*armv7l.deb" | cut -d '"' -f 4)
+releaseURL=$(curl -s "https://api.github.com/repos/TheNeskik/OctoDash/releases/latest" | grep "browser_download_url.*armv7l.deb" | cut -d '"' -f 4)
 dependencies="libgtk-3-0 libnotify4 libnss3 libxss1 libxtst6 xdg-utils libatspi2.0-0 libuuid1 libappindicator3-1 libsecret-1-0 gir1.2-gnomekeyring-1.0 xserver-xorg ratpoison x11-xserver-utils xinit libgtk-3-0 bc desktop-file-utils"
 IFS='/' read -ra version <<< "$releaseURL"
 
@@ -700,7 +700,7 @@ if [[ " ${selected_plugins[@]} " =~ "Display Layer Progress (mandatory)" ]]; the
     "$DIRECTORY"/bin/pip install -q --disable-pip-version-check "https://github.com/OllisGit/OctoPrint-DisplayLayerProgress/releases/latest/download/master.zip"
 fi;
 if [[ " ${selected_plugins[@]} " =~ "Filament Manager" ]]; then
-    "$DIRECTORY"/bin/pip install -q --disable-pip-version-check "https://github.com/malnvenshorn/OctoPrint-FilamentManager/archive/master.zip"
+    "$DIRECTORY"/bin/pip install -q --disable-pip-version-check "https://github.com/OllisGit/OctoPrint-FilamentManager/archive/master.zip"
 fi;
 if [[ " ${selected_plugins[@]} " =~ "Preheat Button" ]]; then
     "$DIRECTORY"/bin/pip install -q --disable-pip-version-check "https://github.com/marian42/octoprint-preheat/archive/master.zip"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-release=$(curl -s "https://api.github.com/repos/UnchartedBull/OctoDash/releases/latest" | grep "browser_download_url.*armv7l.deb" | cut -d '"' -f 4)
+release=$(curl -s "https://api.github.com/repos/TheNeskik/OctoDash/releases/latest" | grep "browser_download_url.*armv7l.deb" | cut -d '"' -f 4)
 
 echo "Updating OctoDash"
 
