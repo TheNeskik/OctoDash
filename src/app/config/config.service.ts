@@ -254,6 +254,14 @@ export class ConfigService {
   public showThumbnailByDefault(): boolean {
     return this.config.octodash.preferPreviewWhilePrinting;
   }
+
+  public getAccessKey(): string {
+    return this.config.octoprint.accessToken;
+  }
+
+  public getZBabystepGCode(): string {
+    return this.config.printer.zBabystepGCode;
+  }
 }
 
 interface HttpHeader {
@@ -281,6 +289,7 @@ interface Printer {
   name: string;
   xySpeed: number;
   zSpeed: number;
+  zBabystepGCode: string;
   defaultTemperatureFanSpeed: DefaultTemperatureFanSpeed;
 }
 
@@ -372,7 +381,7 @@ const schema = {
     printer: {
       $id: '#/properties/printer',
       type: 'object',
-      required: ['name', 'xySpeed', 'zSpeed', 'defaultTemperatureFanSpeed'],
+      required: ['name', 'xySpeed', 'zSpeed', 'zBabystepGCode', 'defaultTemperatureFanSpeed'],
       properties: {
         name: {
           $id: '#/properties/printer/properties/name',
@@ -386,6 +395,11 @@ const schema = {
         zSpeed: {
           $id: '#/properties/printer/properties/zSpeed',
           type: 'integer',
+        },
+        zBabystepGCode: {
+          $id: '#/properties/printer/properties/zBabystepGCode',
+          type: 'string',
+          pattern: '^(.*)$',
         },
         defaultTemperatureFanSpeed: {
           $id: '#/properties/printer/properties/defaultTemperatureFanSpeed',
@@ -427,11 +441,11 @@ const schema = {
         },
         feedSpeed: {
           $id: '#/properties/filament/properties/feedSpeed',
-          type: 'integer',
+          type: 'number',
         },
         feedSpeedSlow: {
           $id: '#/properties/filament/properties/feedSpeedSlow',
-          type: 'integer',
+          type: 'number',
         },
         purgeDistance: {
           $id: '#/properties/filament/properties/purgeDistance',
